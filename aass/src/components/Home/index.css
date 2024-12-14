@@ -1,0 +1,133 @@
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+  }
+  
+  .hero-section h1 {
+    color: #2d3748;
+  }
+  
+  .hero-section .btn-primary {
+    background-color: #6366f1;
+    border: none;
+  }
+  
+  .hero-section .btn-outline-primary {
+    border-color: #6366f1;
+    color: #6366f1;
+  }
+  
+  .hero-section .btn-outline-primary:hover {
+    background-color: #6366f1;
+    color: #fff;
+  }
+  
+  /* Features Section */
+  .features-section {
+    background: #f9fafb;
+  }
+  
+  .feature-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+  }
+  /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-section {
+  background-image: url('https://example.com/your-image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section h1, .hero-section p {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.hero-section .btn {
+  transition: background-color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated {
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+}
+
+.animated.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.animated.delay-2 {
+  animation-delay: 0.6s;
+}
+
+/* Features Section */
+.feature-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0056b3;
+}
+
+/* Custom Styling for Buttons */
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Animation */
+@keyframes heroAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,53 @@
+.about-container {
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  .hero-section {
+    background: linear-gradient(120deg, #f3f4f6, #ffffff);
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fade-in 1.5s ease-in forwards;
+  }
+  
+  .fade-in-delayed {
+    opacity: 0;
+    animation: fade-in 1.5s ease-in 0.5s forwards;
+  }
+  
+  .fade-in-long {
+    opacity: 0;
+    animation: fade-in 1.5s ease-in 1s forwards;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .why-choose-us-section {
+    background: linear-gradient(120deg, #ffffff, #f3f4f6);
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  

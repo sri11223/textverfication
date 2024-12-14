@@ -1,0 +1,109 @@
+/* Centering and styling the container */
+.feedback-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  color: #cc1a1a;
+  padding: 20px;
+}
+.heading{
+  color: #cc1a1a;
+}
+/* Main heading styling */
+.main-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form styling */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Input field styling */
+.title-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.title-input:focus {
+  border-color: #4caf50;
+}
+
+/* Submit button styling */
+.submit-btn {
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.submit-btn.loading {
+  background-color: #ff9800;
+}
+
+.submit-btn:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.error-message {
+  color: #f44336;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Feedback result container */
+.feedback-result {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.feedback-content {
+  font-size: 1rem;
+  color: #333;
+}
+
+.highlight-text {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.feedback-text {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.approval-probability {
+  font-weight: bold;
+  color: #2196f3;
+}

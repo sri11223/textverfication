@@ -1,0 +1,150 @@
+/* Sidebar Styling */
+
+.sidebar {
+    transition: width 0.5s ease-in-out; /* Smooth transition for sidebar width */
+    width: 250px;  /* Default width */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .sidebar.collapsed {
+    width: 50px; /* Collapsed state width */
+  }
+  
+  .sidebar .nav-link {
+    text-decoration: none; /* Remove underline */
+    color: white;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+  }
+  
+  .sidebar .bi {
+    font-size: 1.5rem;
+  }
+  
+  /* Button Styling for the arrow */
+  .toggle-btn {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .sidebar .bi-arrow-left, .sidebar .bi-arrow-right {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hide the Dashboard title when the sidebar is collapsed */
+  .sidebar h3 {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .sidebar.collapsed h3 {
+    opacity: 0;
+  }
+  
+  /* Content Styling */
+  .content {
+    transition: margin-left 0.5s ease-in-out; /* Smooth transition for content */
+    margin-left: 250px;  /* Default margin */
+  }
+  
+  .sidebar.collapsed + .content {
+    margin-left: 50px; /* Adjust content margin when sidebar is collapsed */
+  }
+  
+  .card {
+    margin-top: 20px;
+  }
+  
+  .card-body {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+  }
+  
+  .text-primary {
+    color: #007bff !important;
+  }
+  
+  h4 {
+    font-weight: bold;
+  }
+  
+  /* Profile image at the bottom */
+  .profile-container {
+    position: absolute;
+    bottom: 20px;  /* Place profile image 20px from the bottom */
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Center the profile image at the bottom of the sidebar */
+  .sidebar img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+  }
+  
+  /* **Responsive Design** */
+  @media (max-width: 768px) {
+    /* On small screens (Tablets and Mobile) */
+    
+    .sidebar {
+      position: fixed;
+      z-index: 9999;
+      width: 250px;  /* Expand the sidebar */
+      height: 100%;
+    }
+  
+    .sidebar.collapsed {
+      width: 0;
+    }
+  
+    .content {
+      margin-left: 0;
+    }
+  
+    .sidebar h3 {
+      font-size: 1.2rem;
+    }
+  
+    /* Hide the sidebar menu items text when collapsed */
+    .sidebar.collapsed .nav-link {
+      text-align: center;
+    }
+  
+    /* Hamburger Button (Arrow Button) */
+    .toggle-btn {
+      font-size: 1.8rem;
+      margin-top: 10px;
+    }
+  
+    .sidebar img {
+      width: 40px;
+      height: 40px;
+      margin-top: 10px;
+    }
+  
+    /* Adjust main content padding */
+    .content {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  
+  /* When the screen width is 992px or less (Tablet) */
+  @media (max-width: 992px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .sidebar.collapsed {
+      width: 50px;
+    }
+  }
+  

@@ -1,0 +1,46 @@
+.container {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .section-tagline {
+    background: linear-gradient(45deg, #2af598, #009efd);
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 50px;
+  }
+  
+  .step-card {
+    background-color: #fff;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .step-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #2af598, #009efd);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h5 {
+    color: #343a40;
+  }
+  
+  p {
+    color: #6c757d;
+  }
+  
