@@ -15,7 +15,7 @@ logging.getLogger('grpc').setLevel(logging.ERROR)
 
 # Configure the Gemini API
 try:
-    genai.configure(api_key="AIzaSyDNS8j-xrhx9R4hUnmDYy1UEp3z0Fh0zPs")
+    genai.configure(api_key="")
     gemini_model = genai.GenerativeModel("gemini-1.5-flash")
 except Exception as e:
     print(json.dumps({"error": f"Error configuring Gemini API: {str(e)}"}))
