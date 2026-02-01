@@ -14,8 +14,13 @@ logging.getLogger('google').setLevel(logging.ERROR)
 logging.getLogger('grpc').setLevel(logging.ERROR)
 
 # Configure the Gemini API
+api_key = os.getenv("GEMINI_API_KEY")
+if not api_key:
+    print(json.dumps({"error": "GEMINI_API_KEY is not set"}))
+    sys.exit()
+
 try:
-    genai.configure(api_key="")
+    genai.configure(api_key=api_key)
     gemini_model = genai.GenerativeModel("gemini-1.5-flash")
 except Exception as e:
     print(json.dumps({"error": f"Error configuring Gemini API: {str(e)}"}))

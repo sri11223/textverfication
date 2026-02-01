@@ -5,7 +5,7 @@ require('dotenv').config();
 const cors = require('cors');
 app.use(cors());
 
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 app.get('/', (req, res) => {
     res.send('Hello, World!');
   });

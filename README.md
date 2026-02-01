@@ -33,10 +33,11 @@ npm install
 Create `backend/.env` (sample values already present in the repo):
 
 ```env
-port=4000
-url=mongodb://localhost:27017/hackathon
+PORT=4000
+MONGODB_URL=mongodb://localhost:27017/hackathon
 GOOGLE_API_KEY=your_google_custom_search_key
 CX=your_custom_search_engine_id
+GEMINI_API_KEY=your_gemini_api_key
 ```
 
 ### 3) Configure Python dependencies
@@ -47,11 +48,8 @@ The backend executes `backend/src/controllers/app.py` for AI feedback. Install:
 pip install scholarly sentence-transformers google-generativeai
 ```
 
-Then add your Gemini API key in `backend/src/controllers/app.py`:
-
-```python
-genai.configure(api_key="YOUR_GEMINI_API_KEY")
-```
+The Python script reads `GEMINI_API_KEY` from the environment, so ensure it is
+available when the backend runs.
 
 ## Running the App
 
