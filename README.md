@@ -34,7 +34,7 @@ Create `backend/.env` (sample values already present in the repo):
 
 ```env
 port=4000
-url=mongodb://localhost:27017/hackthon
+url=mongodb://localhost:27017/hackathon
 GOOGLE_API_KEY=your_google_custom_search_key
 CX=your_custom_search_engine_id
 ```
