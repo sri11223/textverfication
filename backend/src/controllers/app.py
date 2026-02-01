@@ -14,19 +14,24 @@ logging.getLogger('google').setLevel(logging.ERROR)
 logging.getLogger('grpc').setLevel(logging.ERROR)
 
 # Configure the Gemini API
+api_key = os.getenv("GEMINI_API_KEY")
+if not api_key:
+    print(json.dumps({"error": "GEMINI_API_KEY is not set"}))
+    sys.exit(1)
+
 try:
-    genai.configure(api_key="")
+    genai.configure(api_key=api_key)
     gemini_model = genai.GenerativeModel("gemini-1.5-flash")
 except Exception as e:
     print(json.dumps({"error": f"Error configuring Gemini API: {str(e)}"}))
-    sys.exit()
+    sys.exit(1)
 
 # Initialize the SentenceTransformer model
 try:
     model = SentenceTransformer('all-MiniLM-L6-v2')
 except Exception as e:
     print(json.dumps({"error": f"Error initializing SentenceTransformer: {str(e)}"}))
-    sys.exit()
+    sys.exit(1)
 
 def fetch_top_results(query, num_results=5):
     search_query = scholarly.search_pubs(query)
