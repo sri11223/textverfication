@@ -1,28 +1,30 @@
-const express=require('express');
-const app = express();
-const mongoose=require('mongoose');
-require('dotenv').config();
+const express = require('express');
 const cors = require('cors');
-app.use(cors());
+const cookieParser = require('cookie-parser');
+require('dotenv').config();
 
+const connectDb = require('./utility/db');
+const registerRoutes = require('./routes');
+const errorHandler = require('./middlewares/error.middleware');
+const { info } = require('./utils/logger');
+
+const app = express();
 const port = process.env.PORT || 4000;
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
+
+app.use(cors({ origin: true, credentials: true }));
+app.use(express.json());
+app.use(cookieParser());
+
+app.get('/', (_req, res) => {
+  res.send('Text Verification API');
+});
+
+registerRoutes(app);
+
+app.use(errorHandler);
+
+connectDb().then(() => {
+  app.listen(port, () => {
+    info(`Server running at http://localhost:${port}`);
   });
-  
-  //database
-  const connectDb=require('./utility/db');
-  connectDb().then(
-    app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-  }));  
-
-
-  app.use(express.json());
-// for authentication
-  const auth=require('./router/auth');
-  app.use('/auth',auth)
-
-  // for titles
-  const titleRoutes = require('./router/title');
-  app.use('/api', titleRoutes);
+});
